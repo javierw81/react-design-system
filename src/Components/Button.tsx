@@ -24,6 +24,6 @@ const Button: React.FunctionComponent<IButtonProps> = props => (
 
 Button.defaultProps = {
 	children: null,
-	onClick: () => {}
+	onClick: () => { }
 }
 export default Button

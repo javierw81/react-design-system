@@ -14,13 +14,13 @@ const Container = styled.section`
 `;
 
 function App() {
-    return (
-        <Container>
-        <Title>
-          Hello World! 
+  return (
+    <Container>
+      <Title>
+        Hello World!
         </Title>
-        <Button onClick= {()=>alert("Hello!!")}> click me!</Button>
-      </Container>
-    );
+      <Button onClick={() => alert("Hello!!")}> click me!</Button>
+    </Container>
+  );
 }
 export default App;
