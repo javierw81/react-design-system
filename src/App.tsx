@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import Button from "./Components/Button"
 
 // Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h1`
@@ -16,8 +17,9 @@ function App() {
     return (
         <Container>
         <Title>
-          Hello World!
+          Hello World! 
         </Title>
+        <Button onClick= {()=>alert("Hello!!")}> click me!</Button>
       </Container>
     );
 }
