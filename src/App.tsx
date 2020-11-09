@@ -19,8 +19,8 @@ const App: React.FC = () => {
         <Title>
           Hello World!
         </Title>
-        <Button primary clickFunction={() => alert("Hello primary!!")}> click me!</Button>
-        <Button secondary clickFunction={() => alert("Hello secondary!!")}> click me!</Button>
+        <Button primary onClick={() => alert("Hello primary!!")}> click me!</Button>
+        <Button secondary onClick={() => alert("Hello secondary!!")}> click me!</Button>
       </Container>
     </ThemeProvider>
   );

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export interface IButtonProps extends IStyledProps {
 	children?: React.ReactNode
-	clickFunction?: (e: unknown) => void
+	onClick?: (e: unknown) => void
 }
 
 const ButtonStyled = styled.button<IStyledProps>`
@@ -19,18 +19,18 @@ const ButtonStyled = styled.button<IStyledProps>`
 }`
 
 const Button: React.FunctionComponent<IButtonProps> = props => (
-	<ButtonStyled {...(props as IStyledProps)} onClick={props.clickFunction}  >
+	<ButtonStyled {...(props as IStyledProps)} onClick={props.onClick}  >
 		{props.children}
 	</ButtonStyled>
 )
 
 Button.propTypes = {
-	clickFunction: PropTypes.func,
+	onClick: PropTypes.func,
 	children: PropTypes.node
 }
 
 Button.defaultProps = {
 	children: null,
-	clickFunction: () => { return }
+	onClick: () => { return }
 }
 export default Button
