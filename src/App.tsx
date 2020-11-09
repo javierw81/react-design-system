@@ -12,7 +12,7 @@ const Container = styled.section`
   padding: 4em; 
 `
 
-function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
@@ -25,4 +25,5 @@ function App() {
     </ThemeProvider>
   );
 }
-export default App;
+
+export default App

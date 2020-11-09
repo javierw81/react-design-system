@@ -1,10 +1,11 @@
 import * as React from "react"
 import styled from 'styled-components'
 import { IStyledProps } from "./commons/StyledInterfaces"
+import PropTypes from 'prop-types';
 
 export interface IButtonProps extends IStyledProps {
 	children?: React.ReactNode
-	clickFunction?: (e: any) => void
+	clickFunction?: (e: unknown) => void
 }
 
 const ButtonStyled = styled.button<IStyledProps>`
@@ -22,6 +23,11 @@ const Button: React.FunctionComponent<IButtonProps> = props => (
 		{props.children}
 	</ButtonStyled>
 )
+
+Button.propTypes = {
+	clickFunction: PropTypes.func,
+	children: PropTypes.node
+}
 
 Button.defaultProps = {
 	children: null,
