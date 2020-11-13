@@ -1,23 +1,28 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 
 module.exports = {
-    entry: './src/index.tsx',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index_bundle.js'
+        filename: 'index.js',
+        library: 'react-desing-system',
+        libraryTarget: 'umd',
+        publicPath: '/dist/',
+        umdNamedDefine: true
     },
     target: "web",
-    resolve: {
-        extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
-    },
+
     module: {
-        rules: [         
-           
+        rules: [
             {
                 test: /\.(ts|tsx)$/,
-                loader: "awesome-typescript-loader",
+                loader: 'ts-loader',
+                // use separate build config file, that disables generating declaration files for
+                // .stories and .spec files
+                options: {
+                    configFile: path.resolve(__dirname, 'tsconfig.json'),
+                },
+                exclude: /node_modules/,
             },
             {
                 enforce: "pre",
@@ -28,9 +33,34 @@ module.exports = {
     },
     mode: 'development',
     plugins: [
-        new HtmlWebpackPlugin({
-            template: 'src/index.html'
-        }),
- 
-    ]
+
+    ],
+    resolve: {
+        extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+        alias: {
+            'react': path.resolve(__dirname, './node_modules/react'),
+            'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+            'styled-components': path.resolve(__dirname, './node_modules/components'),
+        }
+    },
+    externals: {
+        'react': {
+            commonjs: "react",
+            commonjs2: "react",
+            amd: "React",
+            root: "React"
+        },
+        'react-dom': {
+            commonjs: "react-dom",
+            commonjs2: "react-dom",
+            amd: "ReactDOM",
+            root: "ReactDOM"
+        },
+        "styled-components": {
+            commonjs: "styled-components",
+            commonjs2: "styled-components",
+            amd: "styled-components",
+            root: "styled-components",
+        },
+    },
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { IStyledProps } from "./commons/StyledInterfaces"
 import PropTypes from 'prop-types';
 
-export interface IButtonProps extends IStyledProps {
+interface IButtonProps extends IStyledProps {
 	children?: React.ReactNode
 	onClick?: (e: unknown) => void
 }

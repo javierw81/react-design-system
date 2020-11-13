@@ -2,7 +2,7 @@ import * as React from 'react'
 import { mount } from 'enzyme'
 import { theme } from '../mocks/theme'
 import { ThemeProvider } from 'styled-components'
-import Button from '../../src/components/Button'
+import { Button } from "../../src"
 
 describe('Button', () => {
 

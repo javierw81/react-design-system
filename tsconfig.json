@@ -1,18 +1,37 @@
 {
-    "compilerOptions": {
-      "jsx": "react",
-      "module": "commonjs",
-      "noImplicitAny": true,
-      "outDir": "./dist/",
-      "preserveConstEnums": true,
-      "removeComments": true,
-      "sourceMap": true,
-      "target": "es5",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-    },
-    "include": [
-      "src/**/*.tsx",
-      "src/**/*.ts"
-    ]
-  }
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "CommonJS",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "outDir": "./dist/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "rootDirs": [
+      "src"
+    ],
+    "lib": [
+      "es2017",
+      "es7",
+      "es6",
+      "dom"
+    ],
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
