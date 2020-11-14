@@ -1,9 +1,3 @@
-export const theme = {
-    color: '#FFFFFF',
-    primary: {
-        color: '#365b87'
-    },
-    secondary: {
-        color: '#CCCCCC'
-    }
-}
+import { theme } from "../../src/themes/theme"
+
+export const themeMock = theme

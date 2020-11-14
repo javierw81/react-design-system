@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
-import { theme } from '../mocks/theme'
+import { themeMock } from '../mocks/theme'
 import { ThemeProvider } from 'styled-components'
 import { Button } from "../../src"
 
@@ -8,7 +8,7 @@ describe('Button', () => {
 
   it('Button render is success', () => {
     const wrapper = mount(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={themeMock}>
         <Button>Hello Button</Button>
       </ThemeProvider>,
     );
@@ -19,7 +19,7 @@ describe('Button', () => {
     const clickFn = jest.fn();
 
     const wrapper = mount(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={themeMock}>
         <Button onClick={clickFn} >Hello Button</Button>
       </ThemeProvider>,
     )

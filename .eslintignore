@@ -6,3 +6,4 @@
 .env
 dist
 webpack.config.js
+jest.config.js
