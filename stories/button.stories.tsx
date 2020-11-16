@@ -3,68 +3,41 @@ import { storiesOf } from "@storybook/react"
 import { Button } from "../src"
 
 storiesOf("Button", module)
-	.add("Primary", () =>
+	.add("Normal", () =>
 		<>
-			<p>Normal</p>
-			<Button primary>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button primary outline>Hello Button</Button>
+			<p>Primary</p>
+			<Button primary onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Secondary</p>
+			<Button secondary onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Success</p>
+			<Button success onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Danger</p>
+			<Button danger onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Warning</p>
+			<Button warning onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Info</p>
+			<Button info onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Light</p>
+			<Button light onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Dark</p>
+			<Button dark onClick={() => alert('Hello!!')}>Hello Button</Button>
 		</>)
-	.add("Secondary", () =>
+	.add("Outline", () =>
 		<>
-			<p>Normal</p>
-			<Button secondary>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button secondary outline>Hello Button</Button>
-		</>)
-	.add("success", () =>
-		<>
-			<p>Normal</p>
-			<Button success>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button success outline>Hello Button</Button>
-		</>)
-
-	.add("danger", () =>
-		<>
-			<p>Normal</p>
-			<Button danger>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button danger outline>Hello Button</Button>
-		</>)
-	.add("warning", () =>
-		<>
-			<p>Normal</p>
-			<Button warning>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button warning outline>Hello Button</Button>
-		</>)
-	.add("info", () =>
-		<>
-			<p>Normal</p>
-			<Button info>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button info outline>Hello Button</Button>
-		</>)
-	.add("light", () =>
-		<>
-			<p>Normal</p>
-			<Button light>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button light outline>Hello Button</Button>
-		</>)
-	.add("dark", () =>
-		<>
-			<p>Normal</p>
-			<Button dark>Hello Button</Button>
-
-			<p>Outline</p>
-			<Button dark outline>Hello Button</Button>
+			<p>Primary</p>
+			<Button primary outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Secondary</p>
+			<Button secondary outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Success</p>
+			<Button success outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Danger</p>
+			<Button danger outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Warning</p>
+			<Button warning outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Info</p>
+			<Button info outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Light</p>
+			<Button light outline onClick={() => alert('Hello!!')}>Hello Button</Button>
+			<p>Dark</p>
+			<Button dark outline onClick={() => alert('Hello!!')}>Hello Button</Button>
 		</>)

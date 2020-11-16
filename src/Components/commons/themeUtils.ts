@@ -6,5 +6,19 @@ export const componentStyleType = (props: any): any => {
                     props.warning ? props.theme.warning :
                         props.info ? props.theme.info :
                             props.light ? props.theme.light :
-                                props.dark ? props.theme.dark : undefined;
+                                props.dark ? props.theme.dark : {
+                                    fontColor: '#FFFFFF',
+                                    backgroundColor: '#007bff',
+                                    borderColor: '#007bff',
+                                    hover: {
+                                        fontColor: '#FFFFFF',
+                                        backgroundColor: '#0069d9',
+                                        borderColor: '#00062cc',
+                                    },
+                                    soft: {
+                                        fontColor: '#004085',
+                                        backgroundColor: '#cce5ff',
+                                        borderColor: '#b8daff'
+                                    }
+                                };
 };

@@ -9,34 +9,21 @@ interface IButtonProps extends IStyledProps {
 	onClick?: (e: unknown) => void
 }
 
-const themeButtonType = (props: any) => {
-	return componentStyleType(props) || {
-		fontColor: '#FFFFFF',
-		backgroundColor: '#007bff',
-		borderColor: '#007bff',
-		hover: {
-			fontColor: '#FFFFFF',
-			backgroundColor: '#0069d9',
-			borderColor: '#00062cc',
-		}
-	};
-}
-
 const ButtonStyled = styled.button<IStyledProps>`
-	border-size:  ${props => props.theme.border.size};
+	border-width:  ${props => props.theme.border.size};
 	border-style: solid;
 	border-radius: ${props => props.theme.border.radius};
-	border-color: ${props => themeButtonType(props).backgroundColor || ''};
-	background-color: ${props => props.outline ? "#FFFFFF" : (themeButtonType(props).backgroundColor || '')};
-	color: ${props => props.outline ? (themeButtonType(props).backgroundColor || '') : (themeButtonType(props).fontColor || '')};
+	border-color: ${props => componentStyleType(props).borderColor || ''};
+	background-color: ${props => props.outline ? "#FFFFFF" : (componentStyleType(props).backgroundColor || '')};
+	color: ${props => props.outline ? (componentStyleType(props).backgroundColor || '') : (componentStyleType(props).fontColor || '')};
 	cursor: pointer;
 	font-size: 15px;
 	padding: 3px 10px;
 	margin: 10px;
 	:hover {
-		border-color: ${props => themeButtonType(props).hover.backgroundColor || ''};
-		background-color: ${props => themeButtonType(props).hover.backgroundColor || ''};
-		color: ${props => themeButtonType(props).hover.fontColor || ''};
+		border-color: ${props => componentStyleType(props).hover.borderColor || ''};
+		background-color: ${props => componentStyleType(props).hover.backgroundColor || ''};
+		color: ${props => componentStyleType(props).hover.fontColor || ''};
 	}
 `
 const Button: React.FunctionComponent<IButtonProps> = props => (
