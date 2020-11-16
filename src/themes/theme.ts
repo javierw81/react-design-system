@@ -142,6 +142,8 @@ export const theme = {
 
 export const GlobalStyle = createGlobalStyle`
   html {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-weight: 400;
     font-size: ${theme.font.size.default};
   }  
   body {

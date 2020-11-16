@@ -10,9 +10,16 @@ describe('Button', () => {
     const wrapper = mount(
       <ThemeProvider theme={themeMock}>
         <Button>Hello Button</Button>
+        <Button primary>Hello Button</Button>
+        <Button secondary>Hello Button</Button>
+        <Button success>Hello Button</Button>
+        <Button danger>Hello Button</Button>
+        <Button warning>Hello Button</Button>
+        <Button light>Hello Button</Button>
+        <Button dark>Hello Button</Button>
       </ThemeProvider>,
     );
-    expect(wrapper.find('button').length).toBe(1);
+    expect(wrapper.find('button').length).toBe(8);
   });
 
   it('Button onClick is success', () => {
