@@ -2,17 +2,20 @@ import * as React from "react"
 import { storiesOf } from "@storybook/react"
 import { Field } from "../src"
 
-storiesOf("Field", module)
-    .add("Default", () =>
-        <>
 
+
+storiesOf("Field", module)
+    .add("Default", () => {
+        const [selectedValue, setSelectedValue] = React.useState("")
+
+        return <>
             <Field>
                 <input type="text" placeholder=" " />
                 <label>Name</label>
             </Field>
 
             <Field>
-                <select>
+                <select className={selectedValue != "" ? "selected" : ""} value={selectedValue} onChange={(e) => { console.log(e); setSelectedValue(e.target.value) }} >
                     <option value=""></option>
                     <option value="1">Alabama</option>
                     <option value="2">Boston</option>
@@ -27,7 +30,8 @@ storiesOf("Field", module)
                 <textarea placeholder=" " />
                 <label>Comments</label>
             </Field>
-        </>)
+        </>
+    })
     .add("required", () =>
         <>
 

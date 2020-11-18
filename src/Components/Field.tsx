@@ -53,7 +53,7 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label {
   color:#000;
 }
 
-select:focus ~ label, select:valid ~ label {
+select:focus ~ label, select:required:valid ~ label, select.selected:valid ~ label {
   top:-18px;
   font-size:14px;
   color:#000;
