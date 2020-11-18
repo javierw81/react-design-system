@@ -5,6 +5,7 @@ export { default as Button } from "./components/Button"
 export { Title } from "./components/Title"
 export { Alert } from "./components/Alert"
 export { Container } from "./components/Container"
+export { Field } from "./components/Field"
 
 export const Defaults = {
     theme,
