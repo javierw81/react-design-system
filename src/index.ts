@@ -1,5 +1,5 @@
 import { theme, GlobalStyle } from "./themes/theme"
-
+import { Normalize } from "./themes/Normalize"
 export { IStyledProps } from "./components/commons/StyledInterfaces"
 export { default as Button } from "./components/Button"
 export { Title } from "./components/Title"
@@ -9,5 +9,6 @@ export { Field } from "./components/Field"
 
 export const Defaults = {
     theme,
-    GlobalStyle
+    GlobalStyle,
+    Normalize
 }

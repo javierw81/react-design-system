@@ -1,18 +1,14 @@
 import styled from 'styled-components'
 import { IStyledProps } from "./commons/StyledInterfaces"
 
-
-
-
-
-
-
 export const Field = styled.div<IStyledProps>` 
 position:relative; 
 margin-bottom:20px; 
 
-input, select, textarea {
-  font-size:14px;
+input[type="text"], 
+input[type="password"], 
+select, 
+textarea {  
   padding:4px 4px;
   display:block;
   width:100%;
@@ -29,15 +25,19 @@ textarea {
   overflow-x: hidden; 
 }
 
-input:focus , select:focus, textarea:focus {
+input[type="text"]:focus, 
+input[type="password"]:focus , 
+select:focus, 
+textarea:focus {
   outline:none;
   border-bottom:2px solid #000; 
 }
 
-label {
-  color:#999; 
-  font-size:14px;
-  font-weight:normal;
+input[type="text"] ~ label, 
+input[type="password"] ~ label, 
+select ~ label,
+textarea ~ label {
+  color:#999;  
   position:absolute;
   pointer-events:none;
   left:5px;
@@ -47,25 +47,31 @@ label {
   -webkit-transition:0.2s ease all;
 }
 
-input:focus ~ label, input:not(:placeholder-shown) ~ label {
-  top:-18px;
-  font-size:14px;
+input[type="text"]:focus ~ label, 
+input[type="password"]:focus ~ label, 
+input[type="text"]:not(:placeholder-shown) ~ label, 
+input[type="password"]:not(:placeholder-shown) ~ label {
+  top:-18px; 
   color:#000;
 }
 
-select:focus ~ label, select:required:valid ~ label, select.selected:valid ~ label {
+select:focus ~ label, 
+select:required:valid ~ label, 
+select.selected:valid ~ label {
   top:-18px;
-  font-size:14px;
   color:#000;
 }
 
-textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label {
+textarea:focus ~ label, 
+textarea:not(:placeholder-shown) ~ label {
   top:-18px;
-  font-size:14px;
   color:#000;
 }
 
-input:required:invalid + label:before, textarea:required:invalid + label:before, select:required:invalid + label:before{
+input[type="text"]:required:invalid + label:before, 
+input[type="password"]:required:invalid + label:before, 
+textarea:required:invalid + label:before, 
+select:required:invalid + label:before{
   content: '*';
 }
 

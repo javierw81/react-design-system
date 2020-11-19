@@ -8,14 +8,18 @@ storiesOf("Field", module)
     .add("Default", () => {
         const [selectedValue, setSelectedValue] = React.useState("")
 
+
         return <>
             <Field>
                 <input type="text" placeholder=" " />
                 <label>Name</label>
             </Field>
-
             <Field>
-                <select className={selectedValue != "" ? "selected" : ""} value={selectedValue} onChange={(e) => { console.log(e); setSelectedValue(e.target.value) }} >
+                <input type="password" placeholder=" " />
+                <label>Password</label>
+            </Field>
+            <Field>
+                <select className={selectedValue != "" ? "selected" : ""} value={selectedValue} onChange={(e) => { setSelectedValue(e.target.value) }} >
                     <option value=""></option>
                     <option value="1">Alabama</option>
                     <option value="2">Boston</option>
@@ -30,6 +34,16 @@ storiesOf("Field", module)
                 <textarea placeholder=" " />
                 <label>Comments</label>
             </Field>
+
+            <Field>
+                <input type="radio" />
+                <label>Male</label>
+            </Field>
+
+            <Field>
+                <input type="checkbox" />
+                <label>Agree</label>
+            </Field>
         </>
     })
     .add("required", () =>
@@ -39,7 +53,10 @@ storiesOf("Field", module)
                 <input type="text" placeholder=" " required />
                 <label>Name</label>
             </Field>
-
+            <Field>
+                <input type="password" placeholder=" " required />
+                <label>Password</label>
+            </Field>
             <Field>
                 <select required>
                     <option value=""></option>
