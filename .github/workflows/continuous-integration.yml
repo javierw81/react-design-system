@@ -25,6 +25,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run Linter
+        run: npm install
+      - name: Run Linter
         run: npm run eslint
       - name: Build
         run: npm run build
