@@ -37,7 +37,7 @@ describe('Field', () => {
     expect(wrapper.find('input').length).toBe(1);
     expect(wrapper.find('select').length).toBe(1);
     expect(wrapper.find('textarea').length).toBe(1);
-    expect(wrapper.find('label').length).toBe(4);
+    expect(wrapper.find('label').length).toBe(3);
   });
 
 })
