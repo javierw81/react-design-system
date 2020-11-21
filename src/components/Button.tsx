@@ -1,15 +1,8 @@
-import * as React from "react"
 import styled from 'styled-components'
 import { IStyledProps } from "./commons/StyledInterfaces"
 import { componentStyleType } from "./commons/themeUtils"
-import PropTypes from "prop-types"
 
-interface IButtonProps extends IStyledProps {
-	children?: React.ReactNode
-	onClick?: (e: unknown) => void
-}
-
-const ButtonStyled = styled.button<IStyledProps>`
+export const Button = styled.button<IStyledProps>`
 	border-width:  ${props => props.theme.border.size};
 	border-style: solid;
 	border-radius: ${props => props.theme.border.radius};
@@ -26,15 +19,3 @@ const ButtonStyled = styled.button<IStyledProps>`
 		color: ${props => componentStyleType(props).hover.fontColor || ''};
 	}
 `
-const Button: React.FunctionComponent<IButtonProps> = props => (
-	<ButtonStyled {...(props as IStyledProps)} onClick={props.onClick}  >
-		{props.children}
-	</ButtonStyled>
-)
-
-Button.propTypes = {
-	onClick: PropTypes.func,
-	children: PropTypes.node
-}
-
-export default Button

@@ -5,6 +5,11 @@ export const Field = styled.div<IStyledProps>`
 position:relative; 
 margin-bottom:20px; 
 
+input[type="radio"] ~ label, 
+input[type="checkbox"]  ~ label{
+  margin-left: 5px;
+}
+
 input[type="text"], 
 input[type="password"], 
 select, 
@@ -16,6 +21,10 @@ textarea {
   background-color: transparent;
   border:none;
   border-bottom:1px solid #757575;
+  :focus {
+    outline:none;
+    border-bottom:2px solid #000; 
+  }
 }
 
 textarea {
@@ -23,14 +32,6 @@ textarea {
   max-height: 260px; 
   overflow:hidden;
   overflow-x: hidden; 
-}
-
-input[type="text"]:focus, 
-input[type="password"]:focus , 
-select:focus, 
-textarea:focus {
-  outline:none;
-  border-bottom:2px solid #000; 
 }
 
 input[type="text"] ~ label, 
@@ -75,9 +76,4 @@ select:required:invalid + label:before{
   content: '*';
 }
 
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 `

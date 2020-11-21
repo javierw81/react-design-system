@@ -1,7 +1,7 @@
 import { theme, GlobalStyle } from "./themes/theme"
 import { Normalize } from "./themes/Normalize"
 export { IStyledProps } from "./components/commons/StyledInterfaces"
-export { default as Button } from "./components/Button"
+export { Button } from "./components/Button"
 export { Title } from "./components/Title"
 export { Alert } from "./components/Alert"
 export { Container } from "./components/Container"
