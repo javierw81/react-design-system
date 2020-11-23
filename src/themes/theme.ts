@@ -142,13 +142,13 @@ export const theme = {
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: Verdana, sans-serif;
     font-weight: 400;
     font-size: ${theme.font.size.default};
   }  
 
   html {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: Verdana, sans-serif;
       font-weight: 400;
       font-size: ${theme.font.size.default};
   }  
