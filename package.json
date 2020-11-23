@@ -19,7 +19,7 @@
     "pack": "npm run build && cd dist && npm pack ../",
     "publish": "npm run build && npm login && npm publish --access public",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "Javier Alfredo Wamba",
