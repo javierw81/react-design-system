@@ -1,6 +1,10 @@
 import * as React from "react"
 import { storiesOf } from "@storybook/react"
-import { Title } from "../src"
+import { Title, Subtitle } from "../src"
 
-storiesOf("Title", module)
-    .add("Default", () => <Title>Hello Title</Title>)
+storiesOf("Titles", module)
+    .add("Default", () =>
+        <>
+            <Title>Hello Title</Title>
+            <Subtitle>Hello Subtitle</Subtitle>
+        </>)

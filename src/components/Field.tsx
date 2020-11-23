@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { IStyledProps } from "./commons/StyledInterfaces"
 
+const labelFloatingAllowedInputTypes = ['text', 'password']
+
 export const Field = styled.div<IStyledProps>` 
 position:relative; 
 margin-bottom:20px; 
@@ -10,8 +12,7 @@ input[type="checkbox"]  ~ label{
   margin-left: 5px;
 }
 
-input[type="text"], 
-input[type="password"], 
+${labelFloatingAllowedInputTypes.map(x => `input[type=${x}]`).join(',')}, 
 select, 
 textarea {  
   padding:4px 4px;
@@ -34,8 +35,7 @@ textarea {
   overflow-x: hidden; 
 }
 
-input[type="text"] ~ label, 
-input[type="password"] ~ label, 
+${labelFloatingAllowedInputTypes.map(x => `input[type=${x}] ~ label`).join(',')}, 
 select ~ label,
 textarea ~ label {
   color:#999;  
@@ -48,10 +48,8 @@ textarea ~ label {
   -webkit-transition:0.2s ease all;
 }
 
-input[type="text"]:focus ~ label, 
-input[type="password"]:focus ~ label, 
-input[type="text"]:not(:placeholder-shown) ~ label, 
-input[type="password"]:not(:placeholder-shown) ~ label {
+${labelFloatingAllowedInputTypes.map(x => `input[type=${x}]:focus ~ label`).join(',')},  
+${labelFloatingAllowedInputTypes.map(x => `input[type=${x}]:not(:placeholder-shown) ~ label`).join(',')} {
   top:-18px; 
   color:#000;
 }
@@ -69,8 +67,7 @@ textarea:not(:placeholder-shown) ~ label {
   color:#000;
 }
 
-input[type="text"]:required:invalid + label:before, 
-input[type="password"]:required:invalid + label:before, 
+${labelFloatingAllowedInputTypes.map(x => `input[type=${x}]:required:invalid + label:before`).join(',')},  
 textarea:required:invalid + label:before, 
 select:required:invalid + label:before{
   content: '*';
