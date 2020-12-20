@@ -9,6 +9,8 @@ export const theme = {
     default: '700px'
   },
   font: {
+    family: 'Verdana, sans-serif',
+    weight: '400',
     color: fontColorLight,
     size: {
       default: '16px'
@@ -142,14 +144,14 @@ export const theme = {
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    font-family: Verdana, sans-serif;
-    font-weight: 400;
+    font-family: ${theme.font.family};
+    font-weight: ${theme.font.weight};
     font-size: ${theme.font.size.default};
   }  
 
   html {
-      font-family: Verdana, sans-serif;
-      font-weight: 400;
+    font-family: ${theme.font.family};
+    font-weight: ${theme.font.weight};
       font-size: ${theme.font.size.default};
   }  
 
