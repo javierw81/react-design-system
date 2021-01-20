@@ -14,6 +14,7 @@
     "eslint": "./node_modules/.bin/eslint .",
     "eslintfix": "./node_modules/.bin/eslint . --fix",
     "test": "jest",
+    "test:coverage": "jest --coverageReporters=text",
     "build-dev": "webpack --mode=development",
     "build": "webpack --mode=production",
     "pack": "npm run build && cd dist && npm pack ../",
