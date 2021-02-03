@@ -1,6 +1,6 @@
 {
   "name": "jw-react-design-system",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
     "build-dev": "webpack --mode=development",
     "build": "webpack --mode=production",
     "pack": "npm run build && cd dist && npm pack ../",
-    "publish": "npm run build && npm login && npm publish --access public",
+    "publish-pack": "npm run build && npm login && npm publish --access public",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
