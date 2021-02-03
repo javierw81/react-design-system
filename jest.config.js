@@ -5,6 +5,7 @@ module.exports = {
             '<rootDir>/__mocks__/fileMock.js',
     },
     preset: 'ts-jest',
+    verbose: true,
     collectCoverage: true,
     coverageReporters: ["text-summary"],
     coverageThreshold: {

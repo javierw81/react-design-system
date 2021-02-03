@@ -15,12 +15,12 @@
     "eslintfix": "./node_modules/.bin/eslint . --fix",
     "test": "jest",
     "test:coverage": "jest --coverageReporters=text",
-    "build-dev": "webpack --mode=development",
-    "build": "webpack --mode=production",
+    "build:development": "webpack --mode=development",
+    "build:production": "webpack --mode=production",
     "pack": "npm run build && cd dist && npm pack ../",
-    "publish-pack": "npm run build && npm login && npm publish --access public",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "pack:publish": "npm run build && npm login && npm publish --access public",
+    "storybook:development": "start-storybook -p 6006",
+    "storybook:production": "build-storybook"
   },
   "keywords": [],
   "author": "Javier Alfredo Wamba",
