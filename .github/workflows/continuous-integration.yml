@@ -29,7 +29,11 @@ jobs:
       - name: Run Linter
         run: npm run eslint
       - name: Build
-        run: npm run build
+        run: npm run build:development
       - name: Run Test
-        run: npm run test
-     
+        run: npm run test 
+      - name: Build Production
+        run: npm run build:production        
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}           
